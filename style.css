@@ -1,0 +1,341 @@
+@import url('https://fonts.googleapis.com/css2?family=Gudea&family=Poppins:wght@200&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;  
+}
+
+#container{
+    width: 100%;
+    height:100%;
+    overflow-y:scroll;
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+}
+ 
+
+body{
+    /* background-image: linear-gradient(30deg, red, blue);
+    border-image-repeat: ; */
+    font-family:'Poppins', sans-serif;
+    height: 100vh;
+    overflow: hidden;
+        /* background-image: linear-gradient(80deg, rgb(173, 12, 0), rgb(21, 34, 78), black);     */
+
+
+} 
+
+.header{
+    /* border: 2px solid black; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 10px;
+    width:100%;
+    flex-wrap: nowrap;
+
+}
+
+.navbar-logo {
+    margin-right: 100px;
+    margin-top: -8px;
+}
+
+.navbar-logo img{
+    height: 50px;
+    
+}
+
+
+.header ul{
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+}
+
+.header_logo{
+    display: flex;
+    justify-content: flex-start;
+    margin: 10px 0 0 30px;
+    width: 185px;
+    min-width: 10px;
+}
+@media screen and (max-width: 630px) {
+    .header_logo{
+        padding:20px;
+        margin-left: -10px; 
+    }
+ }
+@media screen and (max-width: 1060px) {
+       #navigation{
+        display: none;
+       }
+    }
+
+
+.menu-bar ul{
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    font-size: 0.7rem;
+}
+
+.menu-bar a{
+    font-size: unset;
+    font-weight: unset;
+    display:flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    float: left;
+    margin: -15px 0 6px 0;
+    /* border: 2px solid black; */
+    padding: 20px ;
+    text-decoration: none;
+    color: black;  
+    background-image: linear-gradient(90deg, red, red);
+    background-size: 0% 1px;
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    transition: background-size 400ms ease;
+}
+
+.menu-bar a:hover , .dropbtn:hover{
+    color: red;
+    background-size: 100% 1px;
+    text-decoration: none;
+}
+
+/* .menu a:hover::after{
+    color: red;
+    background-size: -100% 3px;
+} */
+
+#contact{
+    background-color: red;
+    color: white;
+    border-bottom-left-radius: 10px;
+    height: 75px;
+}
+
+#contact:hover{
+    background-color:darkslategray;
+    transition: 200ms ease-in;
+    /* box-shadow: 5px 5px 5px 5px rgb(29, 23, 23); */
+}
+
+.dropbtn{
+    background: none;
+    border: none;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+
+}
+
+.dropdown-content{
+    display: none;
+    padding-top: 20px;
+    z-index: 1;
+    
+}
+
+.dropdown-content a{
+    color: red;
+    padding: 12px 16px;
+    text-decoration: none;
+    font-size: 1rem;
+    /* display: block; */
+}
+
+.dropdown-content a:hover{
+    background-size: 0;
+}
+
+.menu-bar li:hover .dropdown-content{
+    display: block;
+    position:absolute;
+    margin-top: 30px;
+    margin-left: -15px;
+    width: (100px, 450px, 500px);
+}
+
+.menu-bar li:hover .dropdown-content ul{
+    display: block;
+    margin:10px;
+}
+
+.menu-bar li:hover .dropdown-content ul li{
+    width: clamp(100px, 350px, 450px);
+    padding: 10px;
+    padding-bottom: 35px;
+    border-bottom: 0.5px dotted;
+    background: white;
+    border-radius: 0;
+    text-align: left;
+}
+
+.dropdown{
+    margin-top: 100px;
+}
+
+.carousel-item img{
+    object-fit: contain;
+    height: 600px;
+}
+
+/* .bt-icon li{
+
+    border: 1px solid blue;
+    width: 50px;
+    height: 50px;
+    border-radius: 20%;
+    top: 90%;
+    left:80%;
+} */
+
+#prev > .carousel-control-prev{
+    background-color: rgb(255, 0, 0);
+    border: 2px solid red;
+    width: 50px;
+    height: 50px;
+    border-radius: 20%;
+    top: 90%;
+    left:80%;
+}
+#next > .carousel-control-next{
+    background-color: rgb(255, 0, 0);
+    border: 2px solid red;
+    width: 50px;
+    height: 50px;
+    border-radius: 20%;
+    top: 90%;
+    right: 3%;
+} 
+
+.carousel-fade .carousel-item {
+    opacity: 0;
+    transition-duration: 1s;
+    transition-property: opacity;
+   }
+
+   .carousel-fade  .carousel-item.active,
+.carousel-fade  .carousel-item-next.carousel-item-left,
+.carousel-fade  .carousel-item-prev.carousel-item-right {
+  opacity: 1;
+}
+
+.carousel-fade .active.carousel-item-left,
+.carousel-fade  .active.carousel-item-right {
+ opacity: 0;
+}
+
+
+.carousel-fade  .carousel-item-next,
+.carousel-fade .carousel-item-prev,
+.carousel-fade .carousel-item.active,
+.carousel-fade .active.carousel-item-left,
+.carousel-fade  .active.carousel-item-prev {
+ transform: translateX(0);
+ transform: translate3d(0, 0, 0);
+}
+
+.carousel-control-prev{
+    left: 5%;
+}
+
+.carousel-control-next{
+    right: 5%;
+}
+
+.carousel-control-prev-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
+   }
+   
+.carousel-control-next-icon {
+     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
+}
+
+.carousel-inner{
+    position:relative;
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    border: 2px solid red;
+    width: 100%;
+    height: 100vh;
+    scroll-snap-align: center;
+
+}
+
+
+section h2{
+    font-size: 4rem;
+    font-weight: bolder;
+}
+
+.section2{
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+    border: 3px solid green;
+    text-align: center;
+}
+
+.carousel-inner #img1{
+    background-color: rgba(236, 19, 19, 0.322);
+}
+.carousel-inner #img2{
+    background-color: rgb(66, 151, 207, 0.322);
+}
+.carousel-inner #img3{
+    background-color: rgb(208, 255, 0, 0.322);
+}
+.carousel-inner #img4{
+    background-color: rgb(61, 250, 102, 0.322);
+}
+.carousel-inner #img5{
+    background-color: rgb(243, 175, 74, 0.322);
+}
+.carousel-inner #img6{
+    background-color: rgb(230, 34, 125, 0.322);
+}
+.carousel-inner #img7{
+    background-color: rgb(56, 238, 168, 0.322);
+}
+
+.section1  h2{
+    font-size: 7vw;
+}
+
+#navigation{
+    position:fixed;
+    top:0;
+    z-index: 1;
+    display: flex;
+    width: 100%;
+    height:60px;
+    background-color: rgba(255, 255, 255);
+    transition: top 0.3s;
+
+}
+
+#section1{
+    margin-top: 60px;
+}
+
+.carousel{
+    margin-top: -10px;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.pers_drop{
+    margin-top: -10px;
+}
